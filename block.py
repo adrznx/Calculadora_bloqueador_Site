@@ -3,11 +3,11 @@ import os
 
 app = Flask(__name__)
 
-# Caminho do arquivo hosts
+
 HOSTS_PATH = r"C:\Windows\System32\drivers\etc\hosts" if os.name == "nt" else "/etc/hosts"
 REDIRECT_IP = "127.0.0.1"
 
-# Página inicial
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -17,7 +17,6 @@ def index():
 def block_site():
     site = request.form['site']
 
-    # Garantir que o site tenha o formato correto
     if not site.startswith("www."):
         site = f"www.{site}"
 
@@ -39,7 +38,7 @@ def block_site():
 def unblock_site():
     site = request.form['site']
 
-    # Garantir que o site tenha o formato correto
+   
     if not site.startswith("www."):
         site = f"www.{site}"
 
