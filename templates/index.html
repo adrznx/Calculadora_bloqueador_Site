@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Blocker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Bloqueador de Sites</h1>
+
+    <p>Massaro Lindo</p>
+
+    <!-- Formulário para bloquear sites -->
+    <form action="/block" method="post">
+        <label for="site">Adicione o Site a ser bloqueado:</label>
+        <input type="text" id="site" name="site" required>
+        <button type="submit">Bloquear</button>
+    </form>
+
+    <!-- Formulário para desbloquear sites -->
+    <form action="/unblock" method="post">
+        <label for="site">Remova seu site bloqueado:</label>
+        <input type="text" id="site" name="site" required>
+        <button type="submit">Desbloquear</button>
+    </form>
+</body>
+</html>
